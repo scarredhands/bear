@@ -88,13 +88,25 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.amber,
       appBar: AppBar(
+        backgroundColor: Colors.amber,
         title: Text('Login'),
       ),
       body: Center(
         child: _isLoading
             ? CircularProgressIndicator()
             : ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue, // Button color
+                  foregroundColor: Colors.white, // Text color
+                  shadowColor: Colors.blueAccent,
+                  elevation: 5,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(32.0),
+                  ),
+                  minimumSize: Size(200, 50), // Set minimum size
+                ),
                 child: Text('Sign in with Google'),
                 onPressed: () {
                   signInAndFetchSubscriptions();

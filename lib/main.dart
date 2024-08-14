@@ -1,6 +1,5 @@
+import 'package:bear/splash_screen.dart';
 import 'package:flutter/material.dart';
-
-import 'login_screen.dart';
 
 void main() async {
   // WidgetsFlutterBinding.ensureInitialized();
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: LoginScreen(),
+      home: SplashScreen(),
     );
   }
 }
